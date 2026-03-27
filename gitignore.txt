@@ -1,0 +1,24 @@
+# Godotキャッシュ
+.godot/
+*.import
+*.uid
+
+# エクスポート成果物（server.pck以外）
+export/
+
+# OS
+.DS_Store
+Thumbs.db
+```
+
+---
+
+### 3. アップロードするフォルダ構成を作成
+
+ローカルで以下のフォルダを作ります（既にFalsevensプロジェクト内に存在）：
+```
+falsevens_server/      ← 新規フォルダ
+├── .gitignore
+├── render.yaml
+├── Dockerfile
+└── server.pck     ← Godotでエクスポートしたもの
