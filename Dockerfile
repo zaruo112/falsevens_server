@@ -10,9 +10,8 @@ RUN apt-get update && apt-get install -y \
     libgles2 \
     && rm -rf /var/lib/apt/lists/*
 
-# Godot 4.6 Linux ヘッドレスバイナリをダウンロード
-# ※ 実際のリリースURLに合わせて変更してください
-ARG GODOT_VERSION=4.6
+# Godot Linux ヘッドレスバイナリをダウンロード
+ARG GODOT_VERSION=4.6.1
 RUN wget -q "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip" \
     -O /tmp/godot.zip && \
     unzip /tmp/godot.zip -d /usr/local/bin/ && \
@@ -28,4 +27,4 @@ COPY server.pck /app/server.pck
 EXPOSE 8080
 
 # ヘッドレスサーバーとして起動
-CMD ["godot", "--headless", "--main-pack", "/app/server.pck"]
+CMD ["godot", "--headless", "--main-pack", "/app/server.pck", "--main-scene", "res://scenes/server/ServerMain.tscn"]
