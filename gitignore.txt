@@ -17,8 +17,12 @@ Thumbs.db
 
 ローカルで以下のフォルダを作ります（既にFalsevensプロジェクト内に存在）：
 ```
-falsevens_server/      ← 新規フォルダ
+falsevens_server/
 ├── .gitignore
 ├── render.yaml
+├── fly.toml
+├── server.pck
 ├── Dockerfile
-└── server.pck     ← Godotでエクスポートしたもの
+└── render/
+    ├ Dockerfile
+    └ nginx.conf
