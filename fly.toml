@@ -1,10 +1,10 @@
-# fly.toml app configuration file generated for falsevens-server on 2026-03-28T03:22:04Z
+# fly.toml app configuration file generated for falsevens-server2 on 2026-03-28T06:20:58Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
 app = 'falsevens-server2'
-primary_region = 'nrt'
+primary_region = 'iad'
 
 [build]
 
@@ -20,4 +20,4 @@ primary_region = 'nrt'
   memory = '1gb'
   cpu_kind = 'shared'
   cpus = 1
-  memory_mb = 256
+  memory_mb = 1024
