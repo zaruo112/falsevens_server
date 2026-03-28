@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: falsevens_server
+    env: docker
+    dockerfilePath: ./render/Dockerfile
+    dockerContext: .
+    plan: free

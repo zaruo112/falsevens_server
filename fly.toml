@@ -3,7 +3,7 @@
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'falsevens-server2'
+app = 'falsevens-server'
 primary_region = 'nrt'
 
 [build]
